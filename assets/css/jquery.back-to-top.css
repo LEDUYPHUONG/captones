@@ -1,0 +1,68 @@
+.bck {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #dc4f72;
+  background-size: 100%;
+  color: #fff;
+  visibility: hidden;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  transition-property: all;
+  box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.bck .fa-arrow-up {
+  line-height: 60px;
+  font-size: 20px;
+  color: white;
+}
+.bck.bck-on {
+  visibility: visible;
+}
+
+.fade {
+  opacity: 0;
+}
+
+.bck-on.fade {
+  opacity: 1;
+}
+
+.rightToLeft {
+  right: -50px;
+}
+
+.bck-on.rightToLeft {
+  right: 1rem;
+}
+
+.bottomToTop {
+  bottom: -50px;
+}
+
+.bck-on.bottomToTop {
+  bottom: 1rem;
+}
+
+.bck-leftToRight {
+  left: -50px;
+}
+
+.bck-on.leftToRight {
+  left: 1rem;
+}
+
+.topToBottom {
+  top: -50px;
+}
+
+.bck-on.topToBottom {
+  top: 1rem;
+}
