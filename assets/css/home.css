@@ -70,6 +70,7 @@ a {
   transition: all 0.4s ease 0s;
   height: 90px;
   box-shadow: 0 3px 9px rgb(0 0 0 / 5%);
+  z-index: 10;
 }
 
 .header .container {
@@ -420,18 +421,75 @@ h4 {
   transform: translateY(-100px);
 }
 
-.features .carousel__features .col:hover .text1 {
+/* .features .carousel__features .col:hover .text1 {
   animation-name: down__up ;
   animation-duration: 1s;
   animation-fill-mode: both;
-  animation-direction: alternate;
+} */
 
+.features .carousel__features .col .text1.active {
+  animation-name: down__up ;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.features .carousel__features .col .text1.in-active {
+  animation-direction: reverse;
 }
 
 /* SOLUTIONS */
 
 .solutions .title {
   text-align: center;
+}
+
+.solutions .main {
+  padding: 0 260px;
+  text-align: center;
+}
+
+.solutions .title{
+  padding: 0 225px;
+  text-align: center;
+}
+
+.solutions .title h1 {
+  padding-bottom: 20px;
+}
+
+.solutions .title p {
+  padding-bottom: 50px;
+}
+
+.solutions .title .img__out {
+  margin-bottom: 40px;
+  padding-top: 40px;
+  
+}
+
+.solutions .main img {
+  display: flex;
+  max-width: 100%;
+}
+
+.solutions .main .img {
+ border: none;
+ border-radius: 10px;
+ overflow: hidden;
+ transition: all 0.5s ease;
+}
+
+.solutions .main .img__out:hover .img {
+  transform: translateY(-10px);
+}
+
+.solutions .main .iconplayclip {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 1px 5px 7.5px rgb(196 196 196 / 50%);
 }
 
 

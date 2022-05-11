@@ -235,9 +235,14 @@
           <h1>Watch Our Two Minute Intro</h1>
           <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc, ut rhoncus turpis sodales quis. Integer sit amet mattis quam.</p>
         </header>
-        <main>
-          <img src="./img/b9.jpg" alt="b9.jpg">
-          <button class="button1">schedule a demo</button>
+        <main class="main">
+          <div class="img__out">
+            <div class="img"><img src="./img/b9.jpg" alt="b9.jpg"></div>
+          </div>
+          <div class="iconplayclip">
+            <i class="fa-solid fa-play"></i>
+          </div>
+          <button class="button1">Request a quote</button>
         </main>
         <footer>
           <div class="logo"><img src="./img/logo1.jpg" alt="logo1.jpg"></div>
@@ -309,6 +314,12 @@
     </script>
     <!-- script for back to top -->
     <script src="./assets/js/jquery.back-to-top.js"></script>
+
+    <!-- chạy ngược animation -->
+    <script src="./assets/js/reverse.js"></script>
+
+
+    <!-- back to top -->
     <script>
       $(function () {
         $(".bck").backToTop({
@@ -317,5 +328,6 @@
         });
       });
     </script>
+
   </body>
 </html>
