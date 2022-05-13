@@ -527,8 +527,128 @@ h4 {
 .solutions .logo__out {
   padding-bottom: 100px;
 }
+/* ourteammember */
 
+.ourteammember header {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+.ourteammember header h1 {
+  padding-bottom: 10px;
+}
 
+.ourteammember {
+  background: #F7F9FC;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+}
+
+.ourteammember main .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.ourteammember img {
+  max-width: 100%;
+}
+.ourteammember .col {
+  width: 25%;
+  padding: 0 30px 15px;
+}
+.ourteammember main .item {
+  height: 100%;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 3px 9px rgb(0 0 0 / 5%);
+  position: relative;
+}
+
+.ourteammember main .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 32%;
+  background-color: #fff;
+}
+
+.ourteammember main .title__in {
+  padding: 15px 15px;
+}
+
+.ourteammember main .title__in a {
+  color: #2c3038;
+}
+
+.ourteammember main .title__in h3 {
+  font-size: 20px;
+}
+
+.ourteammember main .title__in i {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.ourteammember main .title__in .icon__facebook,
+.ourteammember main .title__in .icon__twitter{
+  margin-right: 10px;
+}
+
+.ourteammember main .title__in .fa-facebook-f {
+  background-color: #3b5998;
+}
+
+.ourteammember main .title__in .fa-twitter {
+  background-color: #1da1f2;
+}
+
+.ourteammember main .title__in p{
+  padding-bottom: 10px;
+}
+
+.ourteammember main .item {
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
+
+.ourteammember main .col:hover .item {
+  transform: translateY(-10px);
+  box-shadow: 0 3px 9px rgb(0 0 0 / 20%);
+}
+
+.ourteammember main .col:hover h3 {
+  color: #dc4f72;
+}
+
+/* Ready to build your own brand community */
+
+.ready header {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.ready header p {
+  padding: 10px 0 60px 0;
+}
+
+.ready .button2 {
+  background-color: #dc4f72;
+  color: #fff;
+}
+
+.ready hea
 
 
 
