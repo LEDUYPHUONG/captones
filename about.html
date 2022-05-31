@@ -28,33 +28,27 @@
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
-    <!-- lightgallery -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.5/css/lightgallery.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.5/css/lightgallery-bundle.min.css"
-    />
+    <!-- Magnific Popup jQuery plugin -->
+    <link rel="stylesheet" href="./assets/css/magnific-popup.css">
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/jquery.back-to-top.css" />
-    <link rel="stylesheet" href="./assets/css/home.css" />
+    <link rel="stylesheet" href="./assets/css/about.css" />
     <title>Masterwork</title>
   </head>
   <body>
     <!-- header -->
     <header id="header-home" class="header">
-      <div class="container">
+      <div class="container" id="container__header">
         <nav class="nav-bar">
           <div class="logo">
             <a href="home.html">
               <i class="fa-regular fa-handshake"></i>
               <span>Masterwork</span>
             </a>
+            <span class="menu__icon" onclick="togglemenu()"><i class="fa-solid fa-bars"></i></span> 
           </div>
           <div class="menu">
-            <ul class="menu-list">
+            <ul class="menu-list" id="menuList1">
               <li class="menu-items">
                 <a href="home.html">Home</a>
               </li>
@@ -83,8 +77,41 @@
               <li class="menu-items">
                 <a href="home.html">Contact</a>
               </li>
+              <button class="button1">schedule a demo</button>
             </ul>
-            <button class="button1">schedule a demo</button>
+          </div>
+          <div class="menu">
+            <ul class="menu-list" id="menuList2">
+              <li class="menu-items">
+                <a href="home.html">Home</a>
+              </li>
+              <li class="menu-items menu-list-about">
+                <a href="home.html">About</a>
+              </li>
+              <li class="menu-items">
+                <a href="home.html">Services</a>
+              </li>
+              <li class="menu-items drop-menu">
+                <a class="drop-links">
+                  Pages
+                  <i class="fa fa-angle-down"></i>
+                </a>
+                <div class="drop-menu-show">
+                  <ul>
+                    <li class="drop-menu-items">
+                      <a href="home.html">Blog post</a>
+                    </li>
+                    <li class="drop-menu-items">
+                      <a href="home.html">Blog single</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-items">
+                <a href="home.html">Contact</a>
+              </li>
+              <button class="button1">schedule a demo</button>
+            </ul>
           </div>
         </nav>
       </div>
@@ -146,7 +173,7 @@
             </p>
           </div>
           <div class="col">
-            <h3>Our History 1795</h3>
+            <h3>The power of business</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -154,7 +181,7 @@
             </p>
           </div>
           <div class="col">
-            <h3>Our History 1795</h3>
+            <h3>120 Customer service</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -178,8 +205,8 @@
             sodales quis. Integer sit amet mattis quam.
           </p>
         </header>
-        <main class="carousel__features">
-          <div class="multiple-items">
+        <main class="main__features">
+          <div class="col__out">
             <div class="col" id="col__hover">
               <div class="col__inner">
                 <div class="col__top">
@@ -264,9 +291,10 @@
           <div class="img__out">
             <div class="img"><img src="./img/b9.jpg" alt="b9.jpg" /></div>
           </div>
-          <div id="video-gallery">
+          <div>
             <a
               href="https://www.youtube.com/watch?v=a5KYlHNKQB8"
+              class="video__play"
             >
               <div class="iconplayclip">
                 <i class="fa-solid fa-play"></i>
@@ -536,43 +564,6 @@
     ></script>
     <script type="text/javascript">
       $(document).ready(function () {
-        $(".multiple-items").slick({
-          slidesToShow: 4,
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true,
-                arrows: false,
-              },
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                dots: true,
-                arrows: false,
-              },
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-                arrows: false,
-              },
-            },
-          ],
-        });
-      });
-    </script>
-    <script type="text/javascript">
-      $(document).ready(function () {
         $(".autoplay").slick({
           slidesToShow: 4,
           slidesToScroll: 1,
@@ -586,7 +577,7 @@
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 infinite: true,
-                dots: true,
+                dots: false,
                 arrows: false,
               },
             },
@@ -595,7 +586,7 @@
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
-                dots: true,
+                dots: false,
                 arrows: false,
               },
             },
@@ -604,7 +595,7 @@
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                dots: true,
+                dots: false,
                 arrows: false,
               },
             },
@@ -618,25 +609,72 @@
     <script>
       $(function () {
         $(".bck").backToTop({
-          iconName: "fas fa-arrow-up",
-          fxName: "rightToLeft",
+          iconName: "fa-solid fa-angle-up",
+          fxName: "fadeIn",
         });
       });
     </script>
-    <!-- lightgallery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.5/lightgallery.min.js"></script>
-    <!-- <script>
-      import lightGallery from "https://www.youtube.com/watch?v=a5KYlHNKQB8";
-
-      import lgVideo from "https://www.youtube.com/watch?v=a5KYlHNKQB8";
-
-      lightGallery(document.getElementById("gallery-container"), {
-        speed: 500,
-        plugins: [lgVideo],
-      });
-    </script> -->
+    <!-- Magnific Popup jQuery plugin -->
+    <script src="./assets/js/jquery.magnific-popup.min.js"></script>
     <script>
-      lightGallery(document.getElementById('video-gallery')); 
+      $(document).ready(function() {
+          $('.video__play').magnificPopup({
+            type:'iframe',
+            iframe: {
+                markup: '<div class="mfp-iframe-scaler">'+
+                          '<div class="mfp-close"></div>'+
+                          '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+                        '</div>',
+
+                patterns: {
+                  youtube: {
+                    index: 'youtube.com/', 
+
+                    id: 'v=', 
+
+                    src: 'http://www.youtube.com/embed/%id%?autoplay=1' //nhớ thêm http: vào chổ này nè
+                  },
+                  vimeo: {
+                    index: 'vimeo.com/',
+                    id: '/',
+                    src: '//player.vimeo.com/video/%id%?autoplay=1'
+                  },
+                  gmaps: {
+                    index: '//maps.google.',
+                    src: '%id%&output=embed'
+                  }
+
+                  
+
+                },
+
+                srcAction: 'iframe_src', 
+              }
+        });
+      });
     </script>
+    
+    <script>
+      var menuList = document.getElementById("menuList1");
+      menuList.style.maxHeight = "0px";
+      menuList.style.opacity = "0";
+
+      function togglemenu(){
+        if(menuList.style.maxHeight == "0px" && menuList.style.opacity == "0")
+          {
+            menuList.style.maxHeight = "450px";
+            menuList.style.opacity = "1";
+
+          }
+        else
+          {
+            menuList.style.maxHeight = "0px";
+            menuList.style.opacity = "0";
+
+          }
+      }
+    </script>
+
+
   </body>
 </html>
